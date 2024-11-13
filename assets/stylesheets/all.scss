@@ -1,4 +1,41 @@
-.title {
-    color: red;
-    font-style: italic;
-}
+// 全域 class 樣式
+// .title {
+//     color: red;
+//     font-style: italic;
+// }
+
+// 2024/11/05 Day 2 - Nuxt3 專案引入 CSS 樣式
+
+// Bootstrap SCSS 使用了一些客製化的函數（functions），例如色彩處理、大小計算等。這些函數會在後續的變數和混合（mixins）中使用，所以需要先引入，讓其他模組能夠正確調用。
+@import "bootstrap/scss/functions";
+
+// variables 定義了 Bootstrap 中的主要變數，如顏色、間距、字體大小等，這些變數用於控制整體的樣式。引入變數的目的是提供一組可配置的值，供後續的 SCSS 組件和樣式使用。
+@import "bootstrap/scss/variables";
+
+// variables-dark 定義了深色模式專屬的變數，若應用需支援深色模式，這些變數可以和前面的 variables 搭配使用。提前引入確保深色模式相關的變數可以在後續的樣式或自訂樣式中正確調用。
+@import "bootstrap/scss/variables-dark";
+
+// maps 提供一系列的 Sass 映射（maps），例如色彩、間距等的映射表。這些映射表將後續的樣式變得更靈活，使自訂和覆蓋特定樣式更便捷。它依賴於 variables 中的內容，因此須在變數後引入。
+@import "bootstrap/scss/maps";
+
+// mixins 包含了許多預定義的混合（mixins）方法，例如響應式佈局、樣式重用邏輯。這些混合可以讓開發者在不重複程式碼的情況下多次使用樣式或功能。它會使用到先前引入的 variables 和 maps，所以放在這裡。
+@import "bootstrap/scss/mixins";
+
+// root 設置了主要的根樣式（例如 html 和 body 樣式）及全局變數，並將設置應用到整個文件。此時已有了 variables、functions 和 mixins 的支持，因此可以安全地在此設置全局樣式。
+@import "bootstrap/scss/root";
+
+
+// utilities 包含了常用的工具類別，如 .d-flex、.text-center 等，提供快速布局和調整的工具。這些工具大多數基於前面的變數、映射和混合器，因此放在這裡引用。
+@import "bootstrap/scss/utilities";
+
+// reboot 是一組預設的重置樣式（reset styles），旨在讓不同的瀏覽器之間的樣式顯示一致。這個檔案依賴於 variables 和 mixins 來確保樣式一致。
+@import "bootstrap/scss/reboot";
+
+// containers 設置了 Bootstrap 中主要的容器佈局（如 .container、.container-fluid 等）樣式，依賴前面的變數、映射和混合，以保持響應性和一致性。
+@import "bootstrap/scss/containers";
+
+// buttons 設置了按鈕樣式，定義了按鈕的顏色、形狀、大小和狀態等。按鈕使用大量的變數和混合器進行樣式的設置，所以此時導入較為合適。
+@import "bootstrap/scss/buttons";
+
+// utilities/api 是 Bootstrap 中的公用工具，提供動態的 API 設置方式來生成工具類別。這需要依賴於前面所有的變數、映射和混合，所以放在最後。
+@import "bootstrap/scss/utilities/api";
