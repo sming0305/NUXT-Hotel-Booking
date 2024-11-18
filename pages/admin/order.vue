@@ -2,12 +2,11 @@
 definePageMeta({
   layout: 'admin'
 })
-
 </script>
 
 <template>
   <div>
-    Page: admin/index
+    Page: admin/order
   </div>
 </template>
 

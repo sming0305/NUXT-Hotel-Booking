@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <!-- <NuxtWelcome /> -->
+
+  <!-- <NuxtRouteAnnouncer /> -->
+  <!-- <NuxtWelcome /> -->
+
+  <h1>最外層的 App.vue </h1>
+  <NuxtLayout>
     <NuxtPage></NuxtPage>
-  </div>
+  </NuxtLayout>
 </template>
