@@ -21,6 +21,13 @@ const route = useRoute();
     <button type="button" class="btn btn-dark">Dark</button>
 
     <button type="button" class="btn btn-link">Link</button>
+
+    <!-- Day 4 - 使用指令建立元件 -->
+    <p>Day 4 - 使用指令建立元件</p>
+    <ProductCard
+      :imageSrc="'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/typescript-hotel/%E6%A1%8C%E6%A9%9F%E7%89%88/room2-1.png'"
+      :altText="'尊爵雙人房'" :title="'尊爵雙人房'" :price="'NT$10000'" :buttonText="'馬上預約'"></ProductCard>
+
   </div>
 </template>
 
