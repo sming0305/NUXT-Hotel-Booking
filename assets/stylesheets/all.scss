@@ -31,6 +31,8 @@
 // reboot 是一組預設的重置樣式（reset styles），旨在讓不同的瀏覽器之間的樣式顯示一致。這個檔案依賴於 variables 和 mixins 來確保樣式一致。
 @import "bootstrap/scss/reboot";
 
+@import "bootstrap/scss/navbar";
+
 // containers 設置了 Bootstrap 中主要的容器佈局（如 .container、.container-fluid 等）樣式，依賴前面的變數、映射和混合，以保持響應性和一致性。
 @import "bootstrap/scss/containers";
 

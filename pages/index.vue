@@ -17,13 +17,13 @@ getNewsList();
 
 <template>
   <div>
-    <!-- Day 1 - 起手式 : 建立 Nuxt3 專案  -->
+    Day 1 - 起手式 : 建立 Nuxt3 專案
     <h1 class="title">Hello world</h1>
     Page: index
     <p>目前路由的路徑 - route.fullpath 為 : {{ route.fullPath }}</p>
 
 
-    <!-- Day 2 - Nuxt3 專案引入 CSS 樣式 -->
+    Day 2 - Nuxt3 專案引入 CSS 樣式
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button type="button" class="btn btn-success">Success</button>
@@ -34,6 +34,10 @@ getNewsList();
     <button type="button" class="btn btn-dark">Dark</button>
 
     <button type="button" class="btn btn-link">Link</button>
+    <div>
+      Day 3 - 使用指令建立 Layouts
+    </div>
+
 
     <!-- Day 4 - 使用指令建立元件 -->
     <p>Day 4 - 使用指令建立元件</p>
@@ -41,10 +45,10 @@ getNewsList();
       :imageSrc="'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/typescript-hotel/%E6%A1%8C%E6%A9%9F%E7%89%88/room2-1.png'"
       :altText="'尊爵雙人房'" :title="'尊爵雙人房'" :price="'NT$10000'" :buttonText="'馬上預約'"></ProductCard>
 
-    <!-- Day 5 - 使用指令建立 Composables -->
+    Day 5 - 使用指令建立 Composables
 
     <div class="container">
-      <h1>最新消息</h1>
+      <h2>最新消息</h2>
       <!-- <NewsCard v-for="..." :key="..."  v-bind="..." /> -->
 
       <NewsCard v-for="news in newsList" :_id="news._id" :title="news.title" :image="news.image"
@@ -54,6 +58,9 @@ getNewsList();
         <Loading v-model:active="isLoading" />
       </ClientOnly>
     </div>
+
+    Day 6 - NuxtLink 與 路由基礎配置
+    <h2>首頁頁面</h2>
 
   </div>
 </template>

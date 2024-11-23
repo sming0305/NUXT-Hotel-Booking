@@ -21,8 +21,13 @@ export default defineNuxtConfig({
       },
     },
   },
+  router: {
+    options: {
+      // linkActiveClass: "active",
+      linkExactActiveClass: "active",
+    },
+  },
 });
-
 
 // css 屬性將 all.scss 全域加載。
 // additionalData 避免在每個 SCSS 文件中重複引入變數。
